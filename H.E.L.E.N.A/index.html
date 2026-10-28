@@ -1,0 +1,548 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#070810">
+
+    <title>VOID SIGNAL — Archiwum Kosmosu</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Tło kosmiczne -->
+    <div class="stars stars-a" aria-hidden="true"></div>
+    <div class="stars stars-b" aria-hidden="true"></div>
+    <div class="nebula" aria-hidden="true"></div>
+
+    <!-- Nawigacja -->
+    <header class="topbar">
+        <a class="brand" href="#start">
+            <span class="brand-mark">◉</span>
+            Project<span><H2>H.E.L.E.N.A</span></H2>
+        </a>
+
+        <nav>
+            <a href="#kalkulator">Kalkulator</a>
+            <a href="#archiwum">Archiwum</a>
+            <a href="#sygnal">Sygnał</a>
+        </nav>
+
+        <span class="live">
+            <i></i>
+            SYGNAŁ AKTYWNY
+        </span>
+    </header>
+
+    <main id="start">
+
+        <!-- Sekcja główna -->
+        <section class="hero">
+            <div class="eyebrow">
+                <span class="tiny-line"></span>
+                NIE WSZYSTKO, CO ŻYJE, JEST WIDOCZNE
+            </div>
+
+            <h1>
+                WSZECHŚWIAT
+                <br>
+                <span>NIE ODPOWIADA.</span>
+            </h1>
+
+            <p class="hero-copy">
+                Nieskończona ciemność. Nieznane sygnały.
+                Odległości, których ludzki umysł nie potrafi pojąć.
+                Wejdź do archiwum i sprawdź, jak daleko jesteś
+                od nieznanego.
+            </p>
+
+            <div class="hero-actions">
+                <a class="button primary" href="#kalkulator">
+                    Zbadaj odległość <span>↘</span>
+                </a>
+
+                <a class="text-link" href="#archiwum">
+                    Otwórz archiwum <span>↗</span>
+                </a>
+            </div>
+
+            <div class="hero-meta">
+                <div>
+                    <strong>13,8 mld</strong>
+                    <small>LAT — WIEK WSZECHŚWIATA</small>
+                </div>
+
+                <div>
+                    <strong>∞</strong>
+                    <small>MOŻLIWYCH TAJEMNIC</small>
+                </div>
+
+                <div>
+                    <strong class="red-text">???</strong>
+                    <small>ŹRÓDŁO SYGNAŁU</small>
+                </div>
+            </div>
+
+            <!-- Dekoracyjna orbita -->
+            <div class="orbit-wrap" aria-hidden="true">
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+                <div class="planet"></div>
+                <div class="planet-glow"></div>
+
+                <span class="orbit-label label-a">
+                    OBIEKT 09-X
+                </span>
+
+                <span class="orbit-label label-b">
+                    NIEZNANA ORBITA
+                </span>
+
+                <span class="orbit-label label-c">
+                    DIST: ???
+                </span>
+            </div>
+
+            <div class="vertical-note">
+                DOKUMENT NIEDOSTĘPNY
+                <span>/// 09.██.██</span>
+            </div>
+        </section>
+
+        <!-- Sekcja kalkulatora -->
+        <section class="section calculator-section" id="kalkulator">
+            <div class="section-heading">
+                <div>
+                    <div class="eyebrow">
+                        01 / NAWIGACJA MIĘDZYGWIEZDNA
+                    </div>
+
+                    <h2>
+                        ODLEGŁOŚĆ OD
+                        <span>NIEZNANEGO</span>
+                    </h2>
+                </div>
+
+                <p>
+                    Światło jest szybkie.
+                    Kosmos jest niewyobrażalnie większy.
+                </p>
+            </div>
+
+            <div class="calc-grid">
+
+                <!-- Moduł obliczeniowy -->
+                <div class="panel calc-panel">
+                    <div class="panel-top">
+                        <span class="status-dot"></span>
+                        MODUŁ OBLICZENIOWY
+                        <span class="panel-code">CALC_01</span>
+                    </div>
+
+                    <label for="distance">
+                        Odległość w latach świetlnych (ly)
+                    </label>
+
+                    <div class="input-row">
+                        <input
+                            type="number"
+                            id="distance"
+                            min="0"
+                            step="any"
+                            value="4.24"
+                            placeholder="np. 4.24"
+                        >
+                        <span>LY</span>
+                    </div>
+
+                    <div class="quick-values">
+                        <button type="button" data-distance="4.24">
+                            Proxima Centauri
+                        </button>
+
+                        <button type="button" data-distance="1000">
+                            1000 ly
+                        </button>
+
+                        <button type="button" data-distance="100000">
+                            100 tys. ly
+                        </button>
+                    </div>
+
+                    <button
+                        class="button primary full"
+                        id="calculate"
+                        type="button"
+                    >
+                        PRZELICZ ODLEGŁOŚĆ <span>↗</span>
+                    </button>
+
+                    <div class="result-block">
+                        <div class="result-label">
+                            CZAS PODRÓŻY ŚWIATŁA
+                        </div>
+
+                        <div class="result-value" id="lightYearsResult">
+                            4,24 <small>lat</small>
+                        </div>
+
+                        <div class="result-divider"></div>
+
+                        <div class="result-label">
+                            ODLEGŁOŚĆ W KILOMETRACH
+                        </div>
+
+                        <div class="result-value" id="kmResult">
+                            40,1 bln <small>km</small>
+                        </div>
+
+                        <div class="result-label extra-label">
+                            CZAS LOTU PRZY 100 000 KM/H
+                        </div>
+
+                        <div class="result-value" id="travelResult">
+                            ~45,8 tys. lat
+                        </div>
+                    </div>
+
+                    <p class="fine-print">
+                        * Wyniki są przybliżone.
+                        1 rok świetlny ≈ 9,461 biliona kilometrów.
+                    </p>
+                </div>
+
+                <!-- Raport obserwacyjny -->
+                <div class="panel info-panel">
+                    <div class="panel-top">
+                        <span class="red-dot"></span>
+                        RAPORT OBSERWACYJNY
+                        <span class="panel-code">LOG_09</span>
+                    </div>
+
+                    <div class="signal-visual">
+                        <div class="signal-ring ring-one"></div>
+                        <div class="signal-ring ring-two"></div>
+                        <div class="signal-core">?</div>
+                        <div class="signal-cross cross-one"></div>
+                        <div class="signal-cross cross-two"></div>
+                    </div>
+
+                    <div class="report-warning">
+                        ⚠ OSTRZEŻENIE: BRAK POTWIERDZENIA
+                    </div>
+
+                    <h3>Jak daleko naprawdę jesteś?</h3>
+
+                    <p>
+                        Gdy patrzysz w niebo, patrzysz w przeszłość.
+                        Światło z odległej gwiazdy mogło wyruszyć,
+                        zanim na Ziemi pojawiło się życie.
+                    </p>
+
+                    <div class="fact-row">
+                        <span>PRĘDKOŚĆ ŚWIATŁA</span>
+                        <strong>299 792 km/s</strong>
+                    </div>
+
+                    <div class="fact-row">
+                        <span>NASZA GALAKTYKA</span>
+                        <strong>~100 000 ly średnicy</strong>
+                    </div>
+
+                    <div class="fact-row">
+                        <span>STATUS OBSERWACJI</span>
+                        <strong class="red-text">NIEZNANY</strong>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Archiwum kosmiczne -->
+        <section class="section archive-section" id="archiwum">
+            <div class="section-heading">
+                <div>
+                    <div class="eyebrow">
+                        02 / AKTA ZAKAZANE
+                    </div>
+
+                    <h2>
+                        ARCHIWUM
+                        <span>GŁĘBOKIEGO KOSMOSU</span>
+                    </h2>
+                </div>
+
+                <p>
+                    Trzy miejsca, które przypominają,
+                    jak mało wiemy.
+                </p>
+            </div>
+
+            <div class="cards">
+
+                <!-- Karta 1: Mgławica -->
+                <article class="space-card card-nebula">
+                    <div class="card-index">
+                        FILE_001 / NEBULA
+                    </div>
+
+                    <div class="card-art art-nebula">
+                        <span class="nebula-core"></span>
+                    </div>
+
+                    <div class="card-content">
+                        <div class="card-tag">MGŁAWICA</div>
+
+                        <h3>Filary Stworzenia</h3>
+
+                        <p>
+                            Kolumny gazu i pyłu, w których rodzą się
+                            gwiazdy. Piękno, które może skrywać
+                            gwałtowne narodziny.
+                        </p>
+
+                        <div class="card-bottom">
+                            <span>~6 500 ly</span>
+
+                            <button
+                                class="more-btn"
+                                type="button"
+                                data-fact="Filary Stworzenia znajdują się w Mgławicy Orzeł, około 6 500–7 000 lat świetlnych od Ziemi. To obszar formowania się gwiazd."
+                            >
+                                OTWÓRZ AKTA ↗
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Karta 2: Czarna dziura -->
+                <article class="space-card card-hole">
+                    <div class="card-index">
+                        FILE_002 / SINGULARITY
+                    </div>
+
+                    <div class="card-art art-hole">
+                        <span class="black-hole"></span>
+                        <span class="hole-ring"></span>
+                    </div>
+
+                    <div class="card-content">
+                        <div class="card-tag red-text">
+                            OSOBLIWOŚĆ
+                        </div>
+
+                        <h3>Horyzont zdarzeń</h3>
+
+                        <p>
+                            Granica, zza której nawet światło
+                            nie może uciec. Co dzieje się dalej —
+                            wciąż nie wiemy wszystkiego.
+                        </p>
+
+                        <div class="card-bottom">
+                            <span>UCIECZKA: NIEMOŻLIWA</span>
+
+                            <button
+                                class="more-btn"
+                                type="button"
+                                data-fact="Horyzont zdarzeń to granica czarnej dziury, zza której nic nie może wrócić do zewnętrznego obserwatora. Nie jest to fizyczna powierzchnia."
+                            >
+                                OTWÓRZ AKTA ↗
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Karta 3: Sygnał radiowy -->
+                <article class="space-card card-signal">
+                    <div class="card-index">
+                        FILE_003 / UNKNOWN
+                    </div>
+
+                    <div class="card-art art-signal">
+                        <div class="waveform">
+                            <i></i><i></i><i></i><i></i><i></i>
+                            <i></i><i></i><i></i><i></i><i></i>
+                            <i></i><i></i><i></i><i></i><i></i>
+                            <i></i><i></i>
+                        </div>
+
+                        <span class="signal-coordinate">
+                            06h 12m // ???
+                        </span>
+                    </div>
+
+                    <div class="card-content">
+                        <div class="card-tag red-text">
+                            NIEZIDENTYFIKOWANY
+                        </div>
+
+                        <h3>Sygnał z otchłani</h3>
+
+                        <p>
+                            Wszechświat pełen jest fal radiowych.
+                            Nie każdy tajemniczy sygnał ma jednak
+                            tajemnicze pochodzenie.
+                        </p>
+
+                        <div class="card-bottom">
+                            <span>ŹRÓDŁO: NIEUSTALONE</span>
+
+                            <button
+                                class="more-btn"
+                                type="button"
+                                data-fact="Szybkie błyski radiowe (FRB) to krótkie, intensywne impulsy fal radiowych spoza naszej galaktyki. Wiele poznanych źródeł jest naturalnych, choć nie wszystkie mechanizmy są wyjaśnione."
+                            >
+                                OTWÓRZ AKTA ↗
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Skaner sygnałów -->
+        <section class="section signal-section" id="sygnal">
+            <div class="signal-box">
+
+                <div class="signal-copy">
+                    <div class="eyebrow">
+                        03 / NASŁUCH PASMA
+                    </div>
+
+                    <h2>
+                        COŚ JEST
+                        <br>
+                        <span>W CIEMNOŚCI.</span>
+                    </h2>
+
+                    <p>
+                        Uruchom symulowany skaner i posłuchaj ciszy
+                        między gwiazdami. Uwaga: to fikcyjna animacja,
+                        nie prawdziwy odbiór sygnałów kosmicznych.
+                    </p>
+
+                    <button
+                        class="button danger"
+                        id="scanButton"
+                        type="button"
+                    >
+                        ▶ URUCHOM SKANER
+                    </button>
+
+                    <div class="scan-status" id="scanStatus">
+                        <span class="status-dot"></span>
+                        SYSTEM GOTOWY — OCZEKIWANIE
+                    </div>
+                </div>
+
+                <!-- Interfejs radaru -->
+                <div class="scanner">
+                    <div class="scanner-grid"></div>
+
+                    <div
+                        class="scanner-sweep"
+                        id="scannerSweep"
+                    ></div>
+
+                    <div class="scanner-center"></div>
+
+                    <span class="scanner-label label-top">
+                        FREQ 1420 MHz
+                    </span>
+
+                    <span class="scanner-label label-left">
+                        RA: 06h 12m
+                    </span>
+
+                    <span class="scanner-label label-right">
+                        DEC: -██°
+                    </span>
+
+                    <span
+                        class="scanner-label label-bottom"
+                        id="scanReadout"
+                    >
+                        NO SIGNAL DETECTED
+                    </span>
+
+                    <span class="blip blip-one"></span>
+                    <span class="blip blip-two"></span>
+                    <span class="blip blip-three"></span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Cytat -->
+        <section class="quote-section">
+            <span class="quote-mark">“</span>
+
+            <p>
+                Może nie jesteśmy sami we wszechświecie.
+                <br>
+                <span>
+                    Może po prostu nikt nie chce odpowiedzieć.
+                </span>
+            </p>
+
+            <small>— ARCHIWUM VOID / NOTATKA 004</small>
+        </section>
+
+    </main>
+
+    <!-- Stopka -->
+    <footer>
+        <a class="brand" href="#start">
+            <span class="brand-mark">◉</span>
+            VOID<span>SIGNAL</span>
+        </a>
+
+        <span>ARCHIWUM KOSMICZNE // WERSJA 1.0</span>
+
+        <span class="footer-right">
+            NIE WSZYSTKIE SYGNAŁY POWINNY ZOSTAĆ ODEBRANE.
+        </span>
+    </footer>
+
+    <!-- Okno modalne z informacjami -->
+    <div class="modal" id="factModal" aria-hidden="true">
+        <div
+            class="modal-card"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modalTitle"
+        >
+            <button
+                class="modal-close"
+                id="closeModal"
+                type="button"
+                aria-label="Zamknij"
+            >
+                ×
+            </button>
+
+            <div class="eyebrow">
+                DOSTĘP DO AKT / OGRANICZONY
+            </div>
+
+            <h2 id="modalTitle">DANE ARCHIWALNE</h2>
+
+            <p id="modalText"></p>
+
+            <button
+                class="button primary"
+                id="modalOkay"
+                type="button"
+            >
+                ZAMKNIJ AKTA
+            </button>
+        </div>
+    </div>
+
+    <!-- Skrypt JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
